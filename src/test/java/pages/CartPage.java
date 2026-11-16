@@ -32,6 +32,9 @@ public class CartPage {
     }
 
     public int getCartItemCount() {
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(pageTitle)
+        );
         return driver.findElements(cartItems).size();
     }
 
