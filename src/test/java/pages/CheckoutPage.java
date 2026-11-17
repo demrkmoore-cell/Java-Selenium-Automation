@@ -39,8 +39,13 @@ public class CheckoutPage {
                 ExpectedConditions.visibilityOfElementLocated(firstNameField)
         ).sendKeys(firstName);
 
-        driver.findElement(lastNameField).sendKeys(lastName);
-        driver.findElement(postalCodeField).sendKeys(postalCode);
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(lastNameField)
+        ).sendKeys(lastName);
+
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(postalCodeField)
+        ).sendKeys(postalCode);
     }
 
     public void continueCheckout() {
